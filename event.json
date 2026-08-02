@@ -1,6 +1,23 @@
 {
-    "title": "LoGY Summer Event",
-    "place": "New Location",
-    "time": "9 PM",
-    "guests": "New Guest"
+    "title": "LoGY Event",
+
+    "sections": [
+        {
+            "icon": "📍",
+            "title": "Place",
+            "content": "Community Hall\n123 Main Street"
+        },
+
+        {
+            "icon": "🕒",
+            "title": "Time",
+            "content": "August 18\n7:00 PM"
+        },
+
+        {
+            "icon": "⭐",
+            "title": "Special Guests",
+            "content": "Alice\nBob\nCharlie"
+        }
+    ]
 }

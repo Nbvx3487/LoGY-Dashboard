@@ -4,26 +4,43 @@ fetch("event.json")
 
         document.getElementById("title").textContent = data.title;
 
-        document.getElementById("place").textContent = data.place;
 
-        document.getElementById("time").textContent = data.time;
+        const container = document.getElementById("sections");
 
-        document.getElementById("guests").textContent = data.guests;
+
+        data.sections.forEach(section => {
+
+            const wrapper = document.createElement("div");
+            wrapper.className = "section";
+
+
+            const button = document.createElement("button");
+            button.className = "section-title";
+            button.textContent = `${section.icon} ${section.title}`;
+
+
+            const content = document.createElement("div");
+            content.className = "content";
+            content.textContent = section.content;
+
+
+            button.addEventListener("click", () => {
+
+                content.classList.toggle("open");
+
+            });
+
+
+            wrapper.appendChild(button);
+            wrapper.appendChild(content);
+
+            container.appendChild(wrapper);
+
+        });
+
+    })
+    .catch(error => {
+
+        console.error("Failed to load event data:", error);
 
     });
-
-
-const buttons = document.querySelectorAll(".section-title");
-
-
-buttons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const content = button.nextElementSibling;
-
-        content.classList.toggle("open");
-
-    });
-
-});
