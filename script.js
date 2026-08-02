@@ -2,8 +2,18 @@ const tg = window.Telegram.WebApp;
 
 tg.ready();
 
+tg.expand();
+
+alert("Before show");
+
 tg.BackButton.show();
 
+alert("After show");
+
+tg.onEvent("backButtonClicked", () => {
+    alert("Telegram back button pressed");
+    tg.close();
+});
 alert(
     "Platform: " + tg.platform +
     "\nVersion: " + tg.version
