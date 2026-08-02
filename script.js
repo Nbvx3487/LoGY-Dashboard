@@ -64,3 +64,7 @@ fetch("event.json")
         "--text",
         tg.textColor
     );
+
+    setTimeout(() => {
+        alert("This is a test alert to demonstrate the Telegram WebApp functionality.");
+    }, 2000);
