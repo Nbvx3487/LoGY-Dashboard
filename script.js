@@ -2,7 +2,7 @@ const tg = window.Telegram.WebApp;
 
 tg.ready();
 
-// tg.BackButton.show();
+tg.BackButton.show();
 
 tg.onEvent("backButtonClicked", () => {
     alert("Close try 111");
