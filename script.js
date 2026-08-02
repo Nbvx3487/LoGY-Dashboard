@@ -5,6 +5,7 @@ tg.ready();
 // tg.BackButton.show();
 
 tg.onEvent("backButtonClicked", () => {
+    alert("Close try 111");
     tg.close();
 });
 
