@@ -10,10 +10,11 @@ tg.BackButton.show();
 
 alert("After show");
 
-tg.onEvent("backButtonClicked", () => {
-    alert("Telegram back button pressed");
+tg.BackButton.onClick(() => {
+    alert("Back button pressed!");
     tg.close();
 });
+
 alert(
     "Platform: " + tg.platform +
     "\nVersion: " + tg.version
