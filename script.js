@@ -4,6 +4,11 @@ tg.ready();
 
 tg.BackButton.show();
 
+alert(
+    "Platform: " + tg.platform +
+    "\nVersion: " + tg.version
+);
+
 tg.onEvent("backButtonClicked", () => {
     alert("Close try 111");
     tg.close();
