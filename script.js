@@ -1,3 +1,12 @@
+
+
+const tg = window.Telegram.WebApp;
+
+tg.ready();
+
+// tg.expand();
+
+
 fetch("event.json")
     .then(response => response.json())
     .then(data => {
@@ -44,3 +53,13 @@ fetch("event.json")
         console.error("Failed to load event data:", error);
 
     });
+
+    document.documentElement.style.setProperty(
+        "--background",
+        tg.backgroundColor
+    );
+    
+    document.documentElement.style.setProperty(
+        "--text",
+        tg.textColor
+    );
