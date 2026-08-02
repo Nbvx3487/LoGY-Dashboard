@@ -4,10 +4,9 @@ tg.ready();
 
 // tg.BackButton.show();
 
-tg.BackButton.onClick(() => {
+tg.onEvent("backButtonClicked", () => {
     tg.close();
 });
-
 
 fetch("event.json")
     .then(response => response.json())
