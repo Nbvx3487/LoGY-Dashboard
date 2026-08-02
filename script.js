@@ -4,7 +4,7 @@ const tg = window.Telegram.WebApp;
 
 tg.ready();
 
-// tg.expand();
+tg.expand();
 
 
 fetch("event.json")
